@@ -1,0 +1,36 @@
+.navbar {
+  background-color: $color-blue;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: min-content 1fr repeat(4, min-content);
+
+  &__logo-container {
+    margin-left: 2.5rem;
+  }
+
+  &__logo {
+    width: 5rem;
+    display: block;
+    transform: translateY(.5rem);
+  }
+
+  &__options {
+    list-style: none;
+    grid-column: 3 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(16rem, 1fr));
+    grid-gap: 2.5rem;
+    align-items: center;
+  }
+
+  &__link,
+  &__link:active,
+  &__link:visited {
+    color: $color-orange;
+    font-family: $font-secondary;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    font-size: 2rem;
+  }
+}

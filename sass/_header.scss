@@ -1,0 +1,38 @@
+.header {
+  background-image: linear-gradient(rgba($color-orange, .55), rgba($color-orange, .55)),
+                    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) repeat(2, 1fr);
+  grid-template-rows: min-content min-content;
+  align-content: center;
+
+  &__heading {
+    color: $color-primary;
+    font-family: $font-main-heading;
+    font-size: 16rem;
+    line-height: 1;
+    font-weight: 800;
+    justify-self: center;
+    align-self: end;
+    display: inline-block;
+    letter-spacing: .7rem;
+  }
+
+  &__subheading {
+    color: $color-blue;
+    font-size: 5rem;
+    grid-column: 1 / 2;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    justify-self: center;
+    display: inline-block;
+    margin-top: -2rem;
+    letter-spacing: .4rem;
+  }
+
+
+}
