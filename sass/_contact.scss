@@ -1,0 +1,136 @@
+.contact {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, .8);
+  z-index: 2500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    width: 75%;
+    background-color: $background-color;
+    overflow: hidden;
+
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      justify-self: end;
+      text-decoration: none;
+      margin-right: 2.4rem;
+      margin-top: 1rem;
+      font-size: 6rem;
+      color: $color-blue;
+    }
+
+    &:hover {
+      color: $color-orange;
+    }
+    
+  }
+
+  &__header {
+    color: $color-blue;
+    font-size: 4rem;
+    font-family: $font-secondary;
+    justify-self: center;
+    margin-top: -2rem;
+    font-weight: 300;
+    padding: 1rem 5rem;
+    text-align: center;
+  }
+
+  &__form {
+    padding: 5rem;
+  }
+}
+
+.form {
+
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__input {
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    border: none;
+    width: 33.33%;
+    color: $color-blue;
+    font-family: $font-secondary;
+    border-bottom: 2px solid transparent;
+    
+    &:focus {
+      outline: none;
+      box-sizing: border-box;
+      border-bottom: 2px solid $color-orange;
+      box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    border: none;
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+    font-weight: 300;
+    font-family: $font-secondary;
+    color: $color-blue;
+    resize: none;
+    border-bottom: 2px solid transparent;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $color-orange;
+      box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+
+    }
+
+    &::-webkit-input-placeholder {
+    font-size: 2rem;
+    font-family: $font-secondary;
+    }
+  }
+
+  &__button {
+    &,
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      padding: 1.5rem 3rem;
+      text-decoration: none;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: $color-blue;
+      background-color: $color-orange;
+
+      border: none;
+      cursor: pointer;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(.1rem);
+      box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    }
+  }
+}
