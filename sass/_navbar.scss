@@ -4,8 +4,26 @@
   display: grid;
   grid-template-columns: min-content 1fr repeat(4, min-content);
 
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, min-content) repeat(4, 1fr);
+    justify-items: center;
+  }
+
   &__logo-container {
     margin-left: 2.5rem;
+
+    @include respond(tab-port) {
+    width: 0;
+    opacity: 0;
+    display: none;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      opacity: 1;
+      display: block;
+      cursor: pointer;
+    }
   }
 
   &__logo {
@@ -32,5 +50,11 @@
     text-transform: uppercase;
     display: block;
     font-size: 2rem;
+
+    @include respond(phone) {
+      width: 0;
+      opacity: 0;
+      display: none;
+    }
   }
 }

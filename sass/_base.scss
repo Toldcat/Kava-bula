@@ -4,7 +4,7 @@ $color-secondary: #1a2435;
 
 $background-color: rgb(245, 243, 244);
 
-$color-orange: rgb(240, 142, 39);
+$color-orange: rgb(240, 143, 40);
 $color-blue: #2c3e5d;
 
 
@@ -24,8 +24,27 @@ $font-secondary: 'Roboto', 'Helvetica', sans-serif;
 $font-main-heading: "Bebas Neue W01 Regular";
 
 
-// BREAKPOINT VARIABLES
+// MEDIA QUERY MANAGER
 
+/*
+0-600px     Phone
+600-900px   Tablet portrait
+900-1200px  Tablet Landcape
+
+[1200-1800px] - normal styles apply
+*/
+
+@mixin respond($breakpoint) {
+  @if  $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content }; //600px
+  }
+  @if  $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) { @content }; //900px
+  }
+  @if  $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) { @content }; // 1200px
+  }
+}
 
 
 
@@ -44,8 +63,18 @@ $font-main-heading: "Bebas Neue W01 Regular";
 
 //Making 1rem = 10px definition
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
 }
 
 .container {
@@ -53,5 +82,5 @@ html {
   display: grid;
   position: relative;
   grid-template-rows: 6rem calc(100vh - 6rem) min-content;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(6, minmax(min-content, 18.5rem)) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(6, minmax(6rem, 18.5rem)) [center-end] minmax(6rem, 1fr) [full-end];
 }
