@@ -6,10 +6,12 @@
   left: 0;
   background-color: rgba(0,0,0, .8);
   z-index: 2500;
+  //making the contact form hidden unless called upon
   opacity: 0;
   visibility: hidden;
   transition: all .3s;
 
+  //making the contact form visible again
   &:target {
     opacity: 1;
     visibility: visible;
@@ -27,6 +29,7 @@
 
   }
 
+  //styling the close link in the corner
   &__close {
     &:link,
     &:visited {
@@ -60,8 +63,8 @@
   }
 }
 
+//form styling
 .form {
-
   &__group {
     &:not(:last-child) {
       margin-bottom: 2rem;

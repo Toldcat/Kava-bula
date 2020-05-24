@@ -70,6 +70,9 @@ html {
     grid-template-columns: repeat(4, minmax(16rem, 1fr));
     grid-gap: 2.5rem;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .navbar__options {
+        grid-template-columns: repeat(4, minmax(5rem, 1fr)); } }
   .navbar__link, .navbar__link:active, .navbar__link:visited {
     color: #f08f28;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -128,7 +131,8 @@ html {
     justify-self: center;
     align-self: end;
     display: inline-block;
-    letter-spacing: .7rem; }
+    letter-spacing: .7rem;
+    margin-left: 1rem; }
   .header__subheading {
     color: #2c3e5d;
     font-size: 5rem;
@@ -138,7 +142,8 @@ html {
     justify-self: center;
     display: inline-block;
     margin-top: -2rem;
-    letter-spacing: .4rem; }
+    letter-spacing: .4rem;
+    margin-left: 1rem; }
 
 .comments {
   grid-column: center-start / center-end;

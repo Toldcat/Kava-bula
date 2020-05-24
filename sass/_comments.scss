@@ -1,3 +1,4 @@
+//Comments section
 .comments {
   grid-column: center-start / center-end;
   display: grid;
@@ -7,6 +8,7 @@
   &__icon {
     display: inline-block;
     margin-top: 5rem;
+    //giving the svg quote icon navy blue colour
     filter: invert(11%) sepia(15%) saturate(1784%) hue-rotate(181deg) brightness(94%) contrast(89%);
   }
 

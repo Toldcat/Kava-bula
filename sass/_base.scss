@@ -18,7 +18,6 @@ $color-blue: #2c3e5d;
         font-style: normal;
     }
 
-
 $font-primary: 'Fira sans', sans-serif;
 $font-secondary: 'Roboto', 'Helvetica', sans-serif;
 $font-main-heading: "Bebas Neue W01 Regular";
@@ -46,12 +45,6 @@ $font-main-heading: "Bebas Neue W01 Regular";
   }
 }
 
-
-
-
-
-
-
 // Cross browser reset
 *,
 *::before,
@@ -68,15 +61,15 @@ html {
   font-size: 62.5%; // 1rem = 10px
 
   @include respond(tab-land) {
-    font-size: 56.25%;
+    font-size: 56.25%; // 1rem = 9px
   }
 
   @include respond(tab-port) {
-    font-size: 50%;
+    font-size: 50%; // 1rem = 8px
   }
-
 }
 
+//Main definition of grid to be able to center sections and give them space on each side
 .container {
   background-color: $background-color;
   display: grid;
